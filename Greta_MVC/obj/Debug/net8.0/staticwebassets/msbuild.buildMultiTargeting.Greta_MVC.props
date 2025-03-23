@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Greta_MVC.props" />
+</Project>

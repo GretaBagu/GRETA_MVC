@@ -1,0 +1,88 @@
+﻿@model Greta_MVC.Models.Student
+
+<div class="page-container">
+    <h2 class="form-title">STUDENTŲ REGISTRACIJA 2025</h2>
+    <div class="form-container">
+        <form asp-action="Register" asp-controller="Student" method="post">
+            <div class="form-group">
+                <label for="Vardas">Vardas:</label>
+                <input type="text" asp-for="Vardas" class="form-control" placeholder="Įveskite vardą" required />
+            </div>
+
+            <div class="form-group">
+                <label for="Amzius">Amžius:</label>
+                <input type="number" asp-for="Amzius" class="form-control" placeholder="Įveskite amžių" required />
+            </div>
+
+            <div class="form-group">
+                <label for="Email">Email:</label>
+                <input type="email" asp-for="Email" class="form-control" placeholder="Įveskite el. paštą" required />
+            </div>
+
+            <button type="submit" class="btn">Registruotis</button>
+        </form>
+    </div>
+</div>
+
+<style>
+    /* Puslapio centrinis konteineris */
+    .page-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #f8f9fa; /* Švelni pilka spalva */
+    }
+
+    /* Antraštės dizainas */
+    .form-title {
+        font-size: 26px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Forma ir jos fonas */
+    .form-container {
+        width: 420px;
+        padding: 30px;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: left;
+    }
+
+    /* Kiekvieno lauko tarpai */
+    .form-group {
+        margin-bottom: 18px;
+    }
+
+    /* Input laukeliai */
+    .form-control {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+        background-color: #fafafa;
+    }
+
+    /* Mygtuko stilius */
+    .btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 18px;
+        border-radius: 5px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+        /* Mygtukas pakeičia spalvą užvedus pelę */
+        .btn:hover {
+            background-color: #0056b3;
+        }
+</style>
